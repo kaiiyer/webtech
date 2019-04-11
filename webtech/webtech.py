@@ -90,7 +90,7 @@ class WebTech():
         if options.urls_file is not None:
             try:
                 with open(options.urls_file) as f:
-                    self.urls = f.readlines()
+                    self.urls = [line.rstrip() for line in f]
             except FileNotFoundException as e:
                 print(e)
                 exit(-1)

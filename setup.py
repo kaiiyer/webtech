@@ -9,11 +9,12 @@ from setuptools import setup
 # Package meta-data.
 NAME = 'webtech'
 DESCRIPTION = 'Identify technologies used on websites'
-URL = 'https://github.com/ShielderSec/webtech'
-EMAIL = 'info@shielder.it'
-AUTHOR = 'thezero, polict'
+URL = 'https://github.com/kaiyer/webtech'
+EMAIL = 'kaiiyer@yahoo.in'
+AUTHOR = 'Kai Iyer'
 REQUIRES_PYTHON = '>=2.7.0'
-VERSION = "1.2.2"
+# the __version__.py file instead of specifying version here
+VERSION = None
 
 # What packages are required for this module to be executed?
 REQUIRED = [

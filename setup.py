@@ -13,7 +13,8 @@ URL = 'https://github.com/ShielderSec/webtech'
 EMAIL = 'info@shielder.it'
 AUTHOR = 'thezero, polict'
 REQUIRES_PYTHON = '>=2.7.0'
-VERSION = "1.2.2"
+# keep the line below as-is, use the __version__.py file instead
+VERSION = None
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -66,15 +67,19 @@ setup(
     install_requires=REQUIRED,
     zip_safe=False,
     include_package_data=True,
-    license='BSD',
+    license='GPLv3',
     classifiers=[
         # Trove classifiers
         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy'
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Environment :: Console',
+        'Operating System :: OS Independent',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Security',
     ]
 )

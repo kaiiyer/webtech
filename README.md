@@ -6,6 +6,7 @@ WebTech is available on pip:
 pip install webtech
 ```
 It can be also installed via setup.py:
+
 ```python setup.py install --user```
 
 ## Usage

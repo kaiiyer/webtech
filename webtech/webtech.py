@@ -92,12 +92,12 @@ class WebTech():
                 print(e)
                 exit(-1)
 
-        self.urls = options.get('urls', [])
+        self.urls = options.get('urls') or []
 
         if options.get('urls_file'):
             try:
                 with open(options.get('urls_file')) as f:
-                    self.urls = f.readlines()
+                    self.urls = [line.rstrip() for line in f]
             except FileNotFoundException as e:
                 print(e)
                 exit(-1)
@@ -127,7 +127,7 @@ class WebTech():
             # Fail badly
             exit(1)
         self.output = {}
-        for url in self.urls:
+        for url in self.urls or []:
             try:
                 temp_output = self.start_from_url(url)
             except (FileNotFoundException, ValueError) as e:
@@ -143,7 +143,7 @@ class WebTech():
                 self.output[url] = temp_output
 
         if self.output_format == Format['json']:
-            print(self.output)
+            print(json.dumps(self.output))
         else:
             for o in self.output.values():
                 print(o)

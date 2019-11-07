@@ -1,6 +1,8 @@
 # webtech
 Identify the technologies used on websites. (Dig-deep into web tech from your terminal)
 
+[![CircleCI](https://circleci.com/gh/kaiiyer/webtech.svg?style=svg)](https://circleci.com/gh/kaiiyer/webtech)
+
 WebTech is available on pip:
 ```
 pip install webtech

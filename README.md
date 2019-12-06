@@ -26,3 +26,4 @@ HTTP Headers information - http://netinfo.link/http/headers.html
 Cookie names - https://webcookies.org/top-cookie-names  
 
 PRs are always welcome !!!
+Inspired by [webtech](https://github.com/ShielderSec/webtech)

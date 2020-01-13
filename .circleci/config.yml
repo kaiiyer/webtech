@@ -53,4 +53,3 @@ jobs:
       - store_artifacts:
           path: test-reports
           destination: test-reports
-CODECOV_TOKEN="734a8eb5-f9c2-4189-bdb5-878c9d18bab2"

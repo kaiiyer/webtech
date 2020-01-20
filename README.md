@@ -1,6 +1,7 @@
 # webtech
 Identify the technologies used on websites. (Dig-deep into web tech from your terminal)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e1f930ad4e9049109d73459f1edb7392)](https://app.codacy.com/manual/kaiiyer47/webtech?utm_source=github.com&utm_medium=referral&utm_content=kaiiyer/webtech&utm_campaign=Badge_Grade_Dashboard)
 [![CircleCI](https://circleci.com/gh/kaiiyer/webtech.svg?style=svg)](https://circleci.com/gh/kaiiyer/webtech)
 
 WebTech is available on pip:

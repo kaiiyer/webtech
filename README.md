@@ -26,6 +26,20 @@ Target URL: https://example.com
 HTTP Headers information - http://netinfo.link/http/headers.html  
 Cookie names - https://webcookies.org/top-cookie-names  
 
+## Burp Integration
+
+Download Jython 2.7.0 standalone and install it into Burp.
+
+In "Extender" > "Options" > "Python Environment":
+
+    Select the Jython jar location
+
+Finally, in "Extender" > "Extension":
+
+    Click "Add"
+    Select "py" or "Python" as extension format
+    Select the Burp-WebTech.py file in this folder
+
 PRs are always welcome !!!
 
 Inspired by [webtech](https://github.com/ShielderSec/webtech)

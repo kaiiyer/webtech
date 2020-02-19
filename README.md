@@ -45,6 +45,7 @@ Finally, in "Extender" > "Extension":
     Select "py" or "Python" as extension format
     Select the Burp-WebTech.py file in this folder
 
-PRs are always welcome !!!
+PRs are highly appreciated !!!
+Read [Guidelines](/CONTRIBUTING.md) for making a PR.
 
 Inspired by [webtech](https://github.com/ShielderSec/webtech)

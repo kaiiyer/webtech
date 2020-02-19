@@ -17,7 +17,7 @@ python setup.py install --user
 ```
 
 ## Usage
-[![Webtech Interface](https://user-images.githubusercontent.com/24914913/74858499-6fc4dc80-536b-11ea-996a-6c6b9bb20a1f.png)]
+![Webtech Interface](https://user-images.githubusercontent.com/24914913/74858499-6fc4dc80-536b-11ea-996a-6c6b9bb20a1f.png)
 
 Scan a website:
 

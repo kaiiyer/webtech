@@ -1,4 +1,0 @@
-# Burpsiute
-
-Burp Suite is a Java based Web Penetration Testing framework used by information security professionals.
-Burp Suite helps you identify vulnerabilities and verify attack vectors that are affecting web applications.

@@ -28,8 +28,9 @@ Target URL: https://example.com
 ```
 ## Resources for database matching
 
-HTTP Headers information - http://netinfo.link/http/headers.html  
-Cookie names - https://webcookies.org/top-cookie-names  
+[HTTP Headers information](http://netinfo.link/http/headers.html)
+
+[Cookie names](https://webcookies.org/top-cookie-names) 
 
 ## Burp Integration
 

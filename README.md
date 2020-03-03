@@ -47,6 +47,9 @@ Finally, in "Extender" > "Extension":
     Select the Burp-WebTech.py file in this folder
 
 PRs are highly appreciated !!!
+
+Read [info about burp](https://github.com/keshakaneria/webtech/blob/master/docs/info_about_burpsuite.md) in docs folder for more information about Burpsuite.
+
 Read [Guidelines](/CONTRIBUTING.md) for making a PR.
 
 Inspired by [webtech](https://github.com/ShielderSec/webtech)

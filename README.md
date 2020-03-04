@@ -9,7 +9,6 @@ Identify the technologies used on websites. (Dig-deep into web tech from your te
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/kaiiyer/webtech.svg)](https://GitHub.com/kaiiyer/webtech//pull/)
 [![GitHub contributors](https://img.shields.io/github/contributors/kaiiyer/webtech.svg)](https://GitHub.com/kaiiyer/webtech/graphs/contributors/)
 ![Last Commit on GitHub](https://img.shields.io/github/last-commit/kaiiyer/webtech.svg)
-
 [![GitHub forks](https://img.shields.io/github/forks/kaiiyer/webtech.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/kaiiyer/webtech)
 [![GitHub stars](https://img.shields.io/github/stars/kaiiyer/webtech.svg?style=social&label=Star&maxAge=2592000)](https://github.com/kaiiyer/webtech)
 [![GitHub watchers](https://img.shields.io/github/watchers/kaiiyer/webtech.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/kaiiyer/webtech/watchers/)

@@ -9,9 +9,9 @@ from setuptools import setup
 # Package meta-data.
 NAME = 'webtech'
 DESCRIPTION = 'Identify technologies used on websites'
-URL = 'https://github.com/kaiyer/webtech'
-EMAIL = 'kaiiyer@yahoo.in'
-AUTHOR = 'Kai Iyer'
+URL = 'https://github.com/ShielderSec/webtech'
+EMAIL = 'info@shielder.it'
+AUTHOR = 'thezero, polict'
 REQUIRES_PYTHON = '>=2.7.0'
 # the __version__.py file instead of specifying version here
 VERSION = None

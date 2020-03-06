@@ -57,7 +57,7 @@ Finally, in "Extender" > "Extension":
 
 PRs are highly appreciated !!!
 
-Read [info about burp](/webtech/docs/info_about_burpsuite.md) for more information about Burpsuite.
+Read [info about burp](docs/info_about_burpsuite.md) for more information about Burpsuite.
 
 Read [Guidelines](/CONTRIBUTING.md) for making a PR.
 

@@ -9,6 +9,9 @@ try:
 except ImportError:  # For Python 3
     from urllib.parse import urlparse
 
+
+import scrape
+
 from .__burp__ import BURP
 from . import database
 from .utils import Format, FileNotFoundException, ConnectionException
@@ -79,6 +82,15 @@ class WebTech():
 
         if options is None:
             return
+
+        if options.get('scrape'):
+
+            obj = scrape.Scraper(options.get('scrape'))
+            obj.display_title()
+            obj.display_header()
+            obj.display_links()
+
+
 
         if options.get('database_file'):
             try:

@@ -15,6 +15,7 @@ def main():
     Main function when running from command line.
     """
     parser = OptionParser(prog="webtech", version="%prog {}".format(VERSION))
+    parser.add_option("-s" , "--scrape" , type =  "string", help = "Enter the URL to scrape")
     parser.add_option(
         "-u", "--urls",
         help="url(s) to scan", type="string", action="callback", callback=split_on_comma)
@@ -51,7 +52,18 @@ def main():
         exit()
 
     wt = WebTech(options)
-    wt.start()
+    if options.get('scrape'):
+
+        """
+        Bad style of making arguments mutually exclusive.
+        Use Argparse's mutually exclusive groups.
+        """
+
+
+        wt.scraping()
+
+    else:
+        wt.start()
 
 
 if __name__ == "__main__":

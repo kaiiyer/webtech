@@ -59,7 +59,6 @@ def main():
         Use Argparse's mutually exclusive groups.
         """
 
-
         wt.scraping()
 
     else:

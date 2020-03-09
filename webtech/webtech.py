@@ -9,15 +9,11 @@ try:
 except ImportError:  # For Python 3
     from urllib.parse import urlparse
 
-
-import scrape
-
 from .__burp__ import BURP
 from . import database
 from .utils import Format, FileNotFoundException, ConnectionException
 from .target import Target
 from .__version__ import __version__ as VERSION
-
 
 def default_user_agent():
     return "webtech/{}".format(VERSION)
@@ -83,8 +79,6 @@ class WebTech():
         if options is None:
             return
 
-        self.scrape_url = options.get('scrape')
-
         if options.get('database_file'):
             try:
                 with open(options.get('database_file')) as f:
@@ -119,16 +113,6 @@ class WebTech():
             self.timeout = int(options.get('timeout', '10'))
         except ValueError:
             self.timeout = 10
-
-    def scraping(self):
-
-        """
-        Scrapes and displays website information.
-        """
-        obj = scrape.Scraper(self.scrape_url)
-        obj.display_title()
-        obj.display_header()
-        obj.display_links()
 
     def start(self):
         """

@@ -83,7 +83,7 @@ class WebTech():
         if options is None:
             return
 
-        #self.scrape_url = options.get('scrape')
+        self.scrape_url = options.get('scrape')
 
         if options.get('database_file'):
             try:
@@ -120,12 +120,12 @@ class WebTech():
         except ValueError:
             self.timeout = 10
 
-    def scraping(self,scrape_url):
+    def scraping(self):
 
         """
         Scrapes and displays website information.
         """
-        obj = scrape.Scraper(scrape_url)
+        obj = scrape.Scraper(self.scrape_url)
         obj.display_title()
         obj.display_header()
         obj.display_links()

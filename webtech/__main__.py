@@ -2,8 +2,8 @@
 import sys
 from optparse import OptionParser
 
-from .__version__ import __version__ as VERSION
-from .webtech import WebTech
+from __version__ import __version__ as VERSION
+from webtech import WebTech
 
 
 def split_on_comma(option, opt_str, value, parser):
@@ -52,7 +52,18 @@ def main():
         exit()
 
     wt = WebTech(options)
-    wt.start()
+    if options.get('scrape'):
+
+        """
+        Bad style of making arguments mutually exclusive.
+        Use Argparse's mutually exclusive groups.
+        """
+
+
+        wt.scraping(options.get('scrape'))
+
+    else:
+        wt.start()
 
 
 if __name__ == "__main__":

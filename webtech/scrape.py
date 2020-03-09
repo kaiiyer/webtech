@@ -4,9 +4,15 @@ from colorama import Fore
 
 #url = "https://www.google.com"
 
+"""
+Colorama handles the text display coloring. Follow same scheme and pattern for coherence.
+
+Moreover, to add more methods write functions in the scraper class, and call them in webtech.py
+under the "scraping" function.
+"""
+
 
 class Scraper():
-
 
     def __init__(self,url):
 

@@ -60,7 +60,7 @@ def main():
         """
 
 
-        wt.scraping(options.get('scrape'))
+        wt.scraping()
 
     else:
         wt.start()

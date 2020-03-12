@@ -61,9 +61,11 @@ class WebTech():
     # 'script' check this pattern in scripts src
     # 'url' check this patter in url
 
-    def __init__(self, options=None):
+    def __init__(self, args):
+        self.args = args
+
         if not BURP:
-            update = False if options is None else options.get('update_db', False)
+            update = False if self.args is None else self.args.update_db
             database.update_database(force=update)
 
         with open(database.WAPPALYZER_DATABASE_FILE) as f:
@@ -77,42 +79,42 @@ class WebTech():
         # Default user agent
         self.USER_AGENT = default_user_agent()
 
-        if options is None:
+        if self.args is None:
             return
-        self.scrape_url = options.get('scrape')
+        self.scrape_url = self.args.scrape
 
-        if options.get('database_file'):
+        if self.args.database_file:
             try:
-                with open(options.get('database_file')) as f:
+                with open(self.args.database_file) as f:
                     self.db = database.merge_databases(self.db, json.load(f))
             except (FileNotFoundException, ValueError) as e:
                 print(e)
                 exit(-1)
 
-        self.urls = options.get('urls') or []
+        self.urls = self.args.urls or []
 
-        if options.get('urls_file'):
+        if self.args.urls_file:
             try:
-                with open(options.get('urls_file')) as f:
+                with open(self.args.urls_file) as f:
                     self.urls = [line.rstrip() for line in f]
             except FileNotFoundException as e:
                 print(e)
                 exit(-1)
 
-        if options.get('user_agent'):
-            self.USER_AGENT = options.get('user_agent')
-        elif options.get('random_user_agent'):
+        if self.args.user_agent:
+            self.USER_AGENT = self.args.user_agent
+        elif self.args.random_user_agent:
             self.USER_AGENT = get_random_user_agent()
 
-        if options.get('grep'):
+        if self.args.grep:
             # Greppable output
             self.output_format = Format['grep']
-        elif options.get('json'):
+        elif self.args.json:
             # JSON output
             self.output_format = Format['json']
 
         try:
-            self.timeout = int(options.get('timeout', '10'))
+            self.timeout = int(self.args.timeout)
         except ValueError:
             self.timeout = 10
 

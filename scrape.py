@@ -2,15 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 from colorama import Fore
 
-#url = "https://www.google.com"
-
 """
 Colorama handles the text display coloring. Follow same scheme and pattern for coherence.
-
 Moreover, to add more methods write functions in the scraper class, and call them in webtech.py
 under the "scraping" function.
 """
-
 
 class Scraper():
 
@@ -35,12 +31,10 @@ class Scraper():
 
         print("\n")
 
-
     def display_links(self):
 
         links = self.soup.find_all("a")
         print(Fore.LIGHTGREEN_EX + "LINKS: " +  Fore.RESET + "\n")
         for ind, val in enumerate(links):
             print((Fore.CYAN +  val.text +f"_link{ind+1}: " + Fore.RESET) + val.attrs["href"])
-
 

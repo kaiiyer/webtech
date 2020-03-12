@@ -1,3 +1,4 @@
 requests==2.22.0
 colorama==0.4.3
 beautifulsoup4==4.8.2
+scrape==0.9.15

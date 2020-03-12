@@ -46,24 +46,19 @@ def main():
     (options, _args) = parser.parse_args(sys.argv)
     options = vars(options)
 
-    if options.get('urls') is None and options.get('urls_file') is None and not options.get('update_db'):
-        print("No URL(s) given!")
-        parser.print_help()
-        exit()
-
     wt = WebTech(options)
     if options.get('scrape'):
-
         """
         Bad style of making arguments mutually exclusive.
         Use Argparse's mutually exclusive groups.
         """
-
         wt.scraping()
 
     else:
+        if options.get('urls') is None and options.get('urls_file') is None and not options.get('update_db'):
+            print("No URL(s) given!")
+            parser.print_help()
+            exit()
         wt.start()
-
-
 if __name__ == "__main__":
     main()

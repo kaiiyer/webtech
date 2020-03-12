@@ -3,6 +3,7 @@
 
 import os
 import json
+import scrape
 import random
 try:
     from urlparse import urlparse
@@ -78,6 +79,7 @@ class WebTech():
 
         if options is None:
             return
+        self.scrape_url = options.get('scrape')
 
         if options.get('database_file'):
             try:
@@ -113,6 +115,18 @@ class WebTech():
             self.timeout = int(options.get('timeout', '10'))
         except ValueError:
             self.timeout = 10
+
+    def scraping(self):
+
+
+        """
+        Scrapes and displays website information.
+        """
+        obj = scrape.Scraper(self.scrape_url)
+        obj.display_title()
+        obj.display_header()
+        obj.display_links()
+
 
     def start(self):
         """

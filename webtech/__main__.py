@@ -8,8 +8,7 @@ from .webtech import WebTech
 class Driver(object):
 
     def __init__(self,args):
-        self.args = args
-    
+        self.args = args    
     def __enter__(self):
         return self
     def __exit__(self, exc_type, exc_value, exc_traceback):
@@ -30,12 +29,8 @@ class Driver(object):
                 #args.print_help()
                 exit()
 
-            wt.start() 
-
-"""
-def split_on_comma(option, opt_str, value, parser):
-    setattr(parser.values, option.dest, value.split(','))
-"""
+            wt.start()
+            
 def split_on_comma(values):
     return values.split(',')
 

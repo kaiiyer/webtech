@@ -1,3 +1,4 @@
+name: python-lint
 on:
  # Trigger the workflow on push or pull request,
  # but only for the master branch
@@ -12,5 +13,8 @@ on:
  release:
   types: # This configuration does not affect the page_build event above
    - created
-name: python-lint
-uses: CyberZHG/github-action-python-lint@0.0.2
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: CyberZHG/github-action-python-lint@0.0.2

@@ -5,8 +5,8 @@ jobs:
     name: Slack Notification
     runs-on: [ubuntu-latest, windows-latest, macos-latest]
     steps:
-      -uses: rtCamp/action-slack-notify@v2.0.1
-      -env:
+-uses: rtCamp/action-slack-notify@v2.0.1
+-env:
         SLACK_CHANNEL: proj_webtech
         SLACK_COLOR: '#3278BD'
         SLACK_ICON: https://github.com/rtCamp.png?size=48

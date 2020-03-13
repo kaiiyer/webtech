@@ -27,7 +27,7 @@ class Driver(object):
                 print("No URL(s) given!")
                 #args.print_help()
                 exit()
-            wt.start()            
+            wt.start()
 def split_on_comma(values):
     return values.split(',')
 

@@ -12,6 +12,6 @@ env:
 jobs:
   slackNotification:
     name: Slack Notification
-    runs-on: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ubuntu-latest
     steps:
     - uses: rtCamp/action-slack-notify@v2.0.1

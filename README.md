@@ -2,6 +2,7 @@
 Identify the technologies used on websites. (Dig-deep into web tech from your terminal)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e1f930ad4e9049109d73459f1edb7392)](https://app.codacy.com/manual/kaiiyer47/webtech?utm_source=github.com&utm_medium=referral&utm_content=kaiiyer/webtech&utm_campaign=Badge_Grade_Dashboard)
+![python-lint](https://github.com/kaiiyer/webtech/workflows/python-lint/badge.svg)
 [![CircleCI](https://circleci.com/gh/kaiiyer/webtech.svg?style=svg)](https://circleci.com/gh/kaiiyer/webtech)
 [![GitHub top language](https://img.shields.io/github/languages/top/kaiiyer/webtech?color=yellow&logo=python)]() 
 ![Only 32 Kb](https://badge-size.herokuapp.com/kaiiyer/webtech/master/Burp-WebTech.py)

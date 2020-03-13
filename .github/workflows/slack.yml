@@ -1,15 +1,11 @@
-- name: Slack Notify
-  uses: rtCamp/action-slack-notify@v2.0.1
+name: Slack Notify
 on: push
-name: Slack Notification
 jobs:
   slackNotification:
     name: Slack Notification
     runs-on: [ubuntu-latest, windows-latest, macos-latest]
     steps:
-    - uses: actions/checkout@v2
-    - name: Slack Notification
-      uses: rtCamp/action-slack-notify@v2.0.0
+      uses: rtCamp/action-slack-notify@v2.0.1
       env:
         SLACK_CHANNEL: proj_webtech
         SLACK_COLOR: '#3278BD'

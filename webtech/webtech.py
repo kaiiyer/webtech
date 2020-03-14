@@ -16,14 +16,17 @@ from .utils import Format, FileNotFoundException, ConnectionException
 from .target import Target
 from .__version__ import __version__ as VERSION
 
+
 def default_user_agent():
     return "webtech/{}".format(VERSION)
+
 
 def get_random_user_agent():
     """
     Get a random user agent from a file
     """
-    ua_file = os.path.join(os.path.realpath(os.path.dirname(__file__)), "ua.txt")
+    ua_file = os.path.join(os.path.realpath(
+        os.path.dirname(__file__)), "ua.txt")
     try:
         with open(ua_file) as f:
             agents = f.readlines()
@@ -61,9 +64,11 @@ class WebTech():
     # 'script' check this pattern in scripts src
     # 'url' check this patter in url
 
-    def __init__(self, options=None):
+    def __init__(self, args):
+        self.args = args
+
         if not BURP:
-            update = False if options is None else options.get('update_db', False)
+            update = False if self.args is None else self.args.update_db
             database.update_database(force=update)
 
         with open(database.WAPPALYZER_DATABASE_FILE) as f:
@@ -77,48 +82,46 @@ class WebTech():
         # Default user agent
         self.USER_AGENT = default_user_agent()
 
-        if options is None:
+        if self.args is None:
             return
-        self.scrape_url = options.get('scrape')
+        self.scrape_url = self.args.scrape
 
-        if options.get('database_file'):
+        if self.args.database_file:
             try:
-                with open(options.get('database_file')) as f:
+                with open(self.args.database_file) as f:
                     self.db = database.merge_databases(self.db, json.load(f))
             except (FileNotFoundException, ValueError) as e:
                 print(e)
                 exit(-1)
 
-        self.urls = options.get('urls') or []
+        self.urls = self.args.urls or []
 
-        if options.get('urls_file'):
+        if self.args.urls_file:
             try:
-                with open(options.get('urls_file')) as f:
+                with open(self.args.urls_file) as f:
                     self.urls = [line.rstrip() for line in f]
             except FileNotFoundException as e:
                 print(e)
                 exit(-1)
 
-        if options.get('user_agent'):
-            self.USER_AGENT = options.get('user_agent')
-        elif options.get('random_user_agent'):
+        if self.args.user_agent:
+            self.USER_AGENT = self.args.user_agent
+        elif self.args.random_user_agent:
             self.USER_AGENT = get_random_user_agent()
 
-        if options.get('grep'):
+        if self.args.grep:
             # Greppable output
             self.output_format = Format['grep']
-        elif options.get('json'):
+        elif self.args.json:
             # JSON output
             self.output_format = Format['json']
 
         try:
-            self.timeout = int(options.get('timeout', '10'))
+            self.timeout = int(self.args.timeout)
         except ValueError:
             self.timeout = 10
 
     def scraping(self):
-
-
         """
         Scrapes and displays website information.
         """
@@ -126,7 +129,6 @@ class WebTech():
         obj.display_title()
         obj.display_header()
         obj.display_links()
-
 
     def start(self):
         """
@@ -173,7 +175,8 @@ class WebTech():
             # Load the file and read it
             target.parse_http_file(url)
         else:
-            raise ValueError("Invalid scheme {} for URL {}. Only 'http', 'https' and 'file' are supported".format(parsed_url.scheme, url))
+            raise ValueError("Invalid scheme {} for URL {}. Only 'http', 'https' and 'file' are supported".format(
+                parsed_url.scheme, url))
 
         return self.perform(target)
 

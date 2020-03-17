@@ -1,0 +1,33 @@
+name: Continuous Deployment
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+    jobs:
+      deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+
+      env:
+        SOURCE_DIR: 'build/'
+        AWS_REGION: 'us-east-1'
+        AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}
+
+      steps:
+        - uses: actions/checkout@v1
+
+        - name: Install dependencies
+          run: yarn
+
+        - name: Build
+          run: yarn build
+
+        - name: Deploy
+          uses: jakejarvis/s3-sync-action@v0.5.0
+          with:
+            args: --acl public-read --follow-symlinks --delete
+          env:
+            AWS_S3_BUCKET: ${{ secrets.STAGING_AWS_S3_BUCKET }}

@@ -5,18 +5,11 @@ on:
       - master
       - develop
 
-    jobs:
-      deploy:
-        name: Deploy
-        runs-on: ubuntu-latest
-
-      env:
-        SOURCE_DIR: 'build/'
-        AWS_REGION: 'us-east-1'
-        AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}
-
-      steps:
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
         - uses: actions/checkout@v1
 
         - name: Install dependencies
@@ -31,3 +24,11 @@ on:
             args: --acl public-read --follow-symlinks --delete
           env:
             AWS_S3_BUCKET: ${{ secrets.STAGING_AWS_S3_BUCKET }}
+
+env:
+  SOURCE_DIR: 'build/'
+  AWS_REGION: 'us-east-1'
+  AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}
+
+     

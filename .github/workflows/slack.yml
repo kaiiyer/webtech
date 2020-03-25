@@ -1,5 +1,16 @@
 name: Slack Notify
 on: [pull_request, issues]
+
+jobs:
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Welcome to WEBTECH Contributor! First issue'
+        pr-message: 'Welcome to WEBTECH Contributor! First PR'
 #env:
 #     SLACK_CHANNEL: proj_webtech
 #     SLACK_COLOR: '#3278BD'
@@ -8,15 +19,4 @@ on: [pull_request, issues]
 #     SLACK_TITLE: Post Title
 #     SLACK_USERNAME: rtCamp
 #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-
-jobs:
-  slackNotification:
-    name: Slack Notification
-    runs-on: ubuntu-latest
-    steps:
 #    - uses: rtCamp/action-slack-notify@v2.0.1
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Welcome to WEBTECH Contributor! First issue'
-        pr-message: 'Welcome to WEBTECH Contributor! First PR'

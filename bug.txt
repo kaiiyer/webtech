@@ -1,0 +1,29 @@
+DESCRIPTION OF THE BUG
+
+The command webtech -u or webtech --urls with the url(s) to scan, which scans the url & identifies the technologies used on the website & detects interesting custom headers does not detect the technologies for certain urls & only detects the custom headers as mentioned below.
+
+
+TO REPRODUCE
+
+Steps to reproduce the behaviour:
+(1) Go to terminal
+(2) Pip install Webtech by using the command 'pip install webtech'
+(3) Then use the command webtech -u or webtech --urls with the url(s) to scan.
+(4) Try for url(s) such as:-
+    webtech -u https://www.faceook.com/
+    webtech -u https://www.twitter.com/
+    webtech -u https://www.instagram.com/
+(5) See the error.
+
+EXPECTED BEHAVIOUR
+
+It must detect the technologies & the custom headers for every url used with the command webtech -u or webtech --urls.
+
+SCREENSHOTS
+
+Are attached below.
+
+DESKTOP
+
+OS:     Linux
+Distro: ubuntu 16.04 LTS

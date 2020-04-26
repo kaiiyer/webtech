@@ -2,7 +2,7 @@
 import webtech
 
 # you can use options, same as from the command line
-wt = webtech.WebTech(options={'json': True})
+wt = webtech.WebTech(args=None)
 
 # scan a single website
 report = wt.start_from_url('https://google.com', timeout=1)
@@ -11,12 +11,9 @@ print(report)
 # scan multiple websites from a list 
 for site in ['https://example.com', 'http://connectionerror']:
     try:
-        report = wt.start_from_url(site)
-
-        techs = report['tech']
+        report = wt.start_from_url(site, timeout=10)
         print("Site: {}".format(site))
-        for tech in techs:
-        	print(" - {}".format(tech))
+        print(report)
     except webtech.utils.ConnectionException:
         print("Site unavailable: {}".format(site))
 

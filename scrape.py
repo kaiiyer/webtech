@@ -36,5 +36,5 @@ class Scraper():
         links = self.soup.find_all("a")
         print(Fore.LIGHTGREEN_EX + "LINKS: " +  Fore.RESET + "\n")
         for ind, val in enumerate(links):
-            print((Fore.CYAN +  val.text +f"_link{ind+1}: " + Fore.RESET) + val.attrs["href"])
+            print((Fore.CYAN +  val.text + "_link{ind+1}: " + Fore.RESET) + val.attrs["href"])
 

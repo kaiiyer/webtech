@@ -1,7 +1,6 @@
 # webtech
 Identify the technologies used on websites. (Dig-deep into web tech from your terminal)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e1f930ad4e9049109d73459f1edb7392)](https://app.codacy.com/manual/kaiiyer47/webtech?utm_source=github.com&utm_medium=referral&utm_content=kaiiyer/webtech&utm_campaign=Badge_Grade_Dashboard)
 ![python-lint](https://github.com/kaiiyer/webtech/workflows/python-lint/badge.svg)
 [![CircleCI](https://circleci.com/gh/kaiiyer/webtech.svg?style=svg)](https://circleci.com/gh/kaiiyer/webtech)
 [![GitHub top language](https://img.shields.io/github/languages/top/kaiiyer/webtech?color=yellow&logo=python)]() 
@@ -13,6 +12,7 @@ Identify the technologies used on websites. (Dig-deep into web tech from your te
 [![GitHub forks](https://img.shields.io/github/forks/kaiiyer/webtech.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/kaiiyer/webtech)
 [![GitHub stars](https://img.shields.io/github/stars/kaiiyer/webtech.svg?style=social&label=Star&maxAge=2592000)](https://github.com/kaiiyer/webtech)
 [![GitHub watchers](https://img.shields.io/github/watchers/kaiiyer/webtech.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/kaiiyer/webtech/watchers/)
+[<img src="https://api.gitsponsors.com/api/badge/img?id=174786366" height="20">](https://api.gitsponsors.com/api/badge/link?p=hx/R2g/FTQ3T6btzz/XZg9+6C3/1EFtRUWjtRcW0B9ZVBydTk+bPSH7BNXoQBkcbRHxx7dOq1ORX6RSJWtuFKAPC3JXiOgaKzxFeLbSvNQ61lbBMJZXcf0/AZwKXd4WfS3OO5fQF/QY+dL+N2CDvCA==)
 
 ## Installation
 WebTech is available on pip:
